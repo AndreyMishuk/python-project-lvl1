@@ -1,4 +1,4 @@
-##BRAIN GAMES
+## BRAIN GAMES
 
 
 <a href="https://codeclimate.com/github/AndreyMishuk/python-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/e5255199409f9f2937b3/maintainability" /></a>
