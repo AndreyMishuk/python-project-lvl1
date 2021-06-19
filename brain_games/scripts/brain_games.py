@@ -2,10 +2,14 @@
 
 from brain_games.cli import welcome_user
 
+NAME = None
+
 
 def main():
-    name = welcome_user()
-    print('Hello, {}'.format(name))
+    global NAME
+    print('Welcome to the Brain Games!')
+    NAME = welcome_user('May I have your name? ')
+    print('Hello, {}'.format(NAME))
 
 
 if __name__ == '__main__':
