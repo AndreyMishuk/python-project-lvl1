@@ -6,4 +6,4 @@
 
 
 # asciinema
-git@github.com:AndreyMishuk/python-project-lvl1.git
+https://asciinema.org/a/kz4SRB0OPtW0zQrWUAVBUYpQK
