@@ -10,11 +10,11 @@ def main():
     name = vie.get_name()
     vie.hello_player(name)
 
-    vie.print_answer('yes', 'no')
+    vie.print_answer(
+        'Answer "yes" if the number is even, otherwise answer "no"')
     for i in range(3):
         number = random.randint(1, 100)
         vie.print_question(number)
-#        print('{} {}'.format('Question:', number))
         user_answer = vie.get_user_answer()
         correct_answer = check_correct_answer(number)
         if correct_answer == user_answer:
@@ -22,9 +22,7 @@ def main():
         else:
             vie.wrong_answer(name, user_answer, correct_answer)
             sys.exit()
-#            end_game(user_answer, correct_answer)
     vie.win(name)
-#    print('{} {}'.format('Congratulations, ', NAME))
 
 
 def check_correct_answer(numb):

@@ -29,9 +29,8 @@ def wrong_answer(name, user_answer, correct_answer):
     print("Let's try again, {}".format(name))
 
 
-def print_answer(question_1, question_2):
-    print('Answer "{}" if the number is even, otherwise answer "{}"'
-          .format(question_1, question_2))
+def print_answer(_str):
+    print(_str)
 
 
 def print_question(number):
