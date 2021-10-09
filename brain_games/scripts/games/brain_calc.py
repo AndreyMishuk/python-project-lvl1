@@ -30,14 +30,12 @@ def main():
         vie.print_question(quesiton_str)
         user_answer = vie.get_user_answer().strip()
         correct_answer = get_correct_answer(quesiton_str)
-        print('a: ', type(user_answer))
 
         if correct_answer == int(user_answer):
             vie.correct_answer()
             print(user_answer, "!!!")
         else:
             vie.wrong_answer(name, user_answer, correct_answer)
-            print(user_answer, "!!!")
             sys.exit()
 
 
