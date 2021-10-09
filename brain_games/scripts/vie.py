@@ -33,8 +33,8 @@ def print_answer(_str):
     print(_str)
 
 
-def print_question(number):
-    print('{}: {}'.format('Question', number))
+def print_question(question):
+    print('{}: {}'.format('Question', question))
 
 
 def win(name):
