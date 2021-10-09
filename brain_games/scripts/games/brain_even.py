@@ -16,7 +16,7 @@ def main():
         number = random.randint(1, 100)
         vie.print_question(number)
         user_answer = vie.get_user_answer()
-        correct_answer = check_correct_answer(number)
+        correct_answer = get_correct_answer(number)
         if correct_answer == user_answer:
             vie.correct_answer()
         else:
@@ -25,7 +25,7 @@ def main():
     vie.win(name)
 
 
-def check_correct_answer(numb):
+def get_correct_answer(numb):
     return 'yes' if numb % 2 == 0 else 'no'
 
 
