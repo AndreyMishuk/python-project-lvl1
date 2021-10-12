@@ -1,7 +1,6 @@
 #!/usr/bin/env/ python
 
 
-import sys
 import random
 from brain_games.scripts import vie
 
@@ -36,7 +35,8 @@ def main():
             print(user_answer, "!!!")
         else:
             vie.wrong_answer(name, user_answer, correct_answer)
-            sys.exit()
+            break
+    vie.win(name)
 
 
 def get_correct_answer(_str):
