@@ -32,7 +32,6 @@ def main():
 
         if correct_answer == int(user_answer):
             vie.correct_answer()
-            print(user_answer, "!!!")
         else:
             vie.wrong_answer(name, user_answer, correct_answer)
             break
