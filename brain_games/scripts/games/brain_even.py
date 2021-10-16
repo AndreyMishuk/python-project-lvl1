@@ -2,6 +2,7 @@
 
 import random
 from brain_games.scripts import vie
+import sys
 
 
 def main():
@@ -20,7 +21,7 @@ def main():
             vie.correct_answer()
         else:
             vie.wrong_answer(name, user_answer, correct_answer)
-            break
+            sys.exit()
     vie.win(name)
 
 
