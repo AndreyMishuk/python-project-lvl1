@@ -18,7 +18,7 @@ def main():
         number2 = random.randint(1, 75)
         queistion_str = (str(number1)
                          + " "
-                         + number2)
+                         + str(number2))
         vie.print_question(queistion_str)
         user_answer = vie.get_user_answer().strip()
         correct_answer = get_correct_answer(queistion_str)
