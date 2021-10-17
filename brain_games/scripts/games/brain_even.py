@@ -2,26 +2,25 @@
 
 import random
 from brain_games.scripts import vie
+from brain_games.scripts import helper
 import sys
 
 
 def main():
-    vie.welcome_player()
-    name = vie.get_name()
-    vie.hello_player(name)
 
-    vie.print_answer(
-        'Answer "yes" if the number is even, otherwise answer "no"')
+    name = helper.greeting(
+        'Answer "yes" if the number is even, otherwise answer "no"'
+    )
+
     for i in range(3):
         number = random.randint(1, 100)
         vie.print_question(number)
         user_answer = vie.get_user_answer()
         correct_answer = get_correct_answer(number)
-        if correct_answer == user_answer:
-            vie.correct_answer()
-        else:
-            vie.wrong_answer(name, user_answer, correct_answer)
+
+        if not helper.chek_correct_answer(name, user_answer, correct_answer):
             sys.exit()
+
     vie.win(name)
 
 
