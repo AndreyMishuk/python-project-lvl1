@@ -3,15 +3,13 @@
 
 import random
 from brain_games.scripts import vie
+from brain_games.scripts import helper
 import sys
 
 
 def main():
 
-    vie.welcome_player()
-    name = vie.get_name()
-    vie.hello_player(name)
-    vie.print_answer(
+    name = helper.greeting(
         'Answer "yes" if given number is prime. Otherwise answer "no"')
 
     for i in range(3):
@@ -19,11 +17,10 @@ def main():
         vie.print_question(number)
         user_answer = vie.get_user_answer()
         correct_answer = is_prime(number)
-        if correct_answer == user_answer:
-            vie.correct_answer()
-        else:
-            vie.wrong_answer(name, user_answer, correct_answer)
+
+        if not helper.chek_correct_answer(name, user_answer, correct_answer):
             sys.exit()
+
     vie.win(name)
 
 

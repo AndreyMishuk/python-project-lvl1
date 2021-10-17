@@ -2,18 +2,16 @@
 
 
 import random
+import sys
 from brain_games.scripts import vie
+from brain_games.scripts import helper
 
 
 def main():
 
-    vie.welcome_player()
-    name = vie.get_name()
-    vie.hello_player(name)
-
     dict_math_oper = {1: '+', 2: '-', 3: '*'}
 
-    vie.print_answer('What is the result of the expression?')
+    name = helper.greeting('What is the result of the expression?')
 
     for i in range(3):
 
@@ -30,11 +28,11 @@ def main():
         user_answer = vie.get_user_answer().strip()
         correct_answer = get_correct_answer(quesiton_str)
 
-        if correct_answer == int(user_answer):
-            vie.correct_answer()
-        else:
-            vie.wrong_answer(name, user_answer, correct_answer)
-            break
+        if not helper.chek_correct_answer(name,
+                                          int(user_answer),
+                                          correct_answer):
+            sys.exit()
+
     vie.win(name)
 
 

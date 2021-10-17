@@ -2,16 +2,15 @@
 
 import random
 from brain_games.scripts import vie
+from brain_games.scripts import helper
 import sys
 
 
 def main():
 
-    vie.welcome_player()
-    name = vie.get_name()
-    vie.hello_player(name)
-    vie.print_answer(
-        'What number is missing in the progression?')
+    name = helper.greeting(
+        'What number is missing in the progression?'
+    )
 
     for i in range(3):
         progression = make_progression()
@@ -20,11 +19,11 @@ def main():
         vie.print_question(question)
         user_answer = vie.get_user_answer()
 
-        if correct_answer == int(user_answer):
-            vie.correct_answer()
-        else:
-            vie.wrong_answer(name, user_answer, correct_answer)
+        if not helper.chek_correct_answer(name,
+                                          int(user_answer),
+                                          correct_answer):
             sys.exit()
+
     vie.win(name)
 
 

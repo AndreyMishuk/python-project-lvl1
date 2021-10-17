@@ -4,14 +4,14 @@ import random
 import sys
 from math import gcd
 from brain_games.scripts import vie
+from brain_games.scripts import helper
 
 
 def main():
-    vie.welcome_player()
-    name = vie.get_name()
-    vie.hello_player(name)
 
-    vie.print_answer('Find the greatest common divisor of given numbers.')
+    name = helper.greeting(
+        'Find the greatest common divisor of given numbers.'
+    )
 
     for i in range(3):
         number1 = random.randint(1, 75)
@@ -23,11 +23,11 @@ def main():
         user_answer = vie.get_user_answer().strip()
         correct_answer = get_correct_answer(queistion_str)
 
-        if correct_answer == int(user_answer):
-            vie.correct_answer()
-        else:
-            vie.wrong_answer(name, user_answer, correct_answer)
+        if not helper.chek_correct_answer(name,
+                                          int(user_answer),
+                                          correct_answer):
             sys.exit()
+
     vie.win(name)
 
 
