@@ -3,7 +3,6 @@
 import random
 from brain_games.scripts import vie
 from brain_games.scripts import helper
-import sys
 
 
 def main():
@@ -19,9 +18,9 @@ def main():
         correct_answer = get_correct_answer(number)
 
         if not helper.chek_correct_answer(name, user_answer, correct_answer):
-            sys.exit()
-
-    vie.win(name)
+            break
+    else:
+        vie.win(name)
 
 
 def get_correct_answer(numb):

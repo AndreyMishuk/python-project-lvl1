@@ -3,7 +3,6 @@
 import random
 from brain_games.scripts import vie
 from brain_games.scripts import helper
-import sys
 
 
 def main():
@@ -22,9 +21,10 @@ def main():
         if not helper.chek_correct_answer(name,
                                           int(user_answer),
                                           correct_answer):
-            sys.exit()
+            break
 
-    vie.win(name)
+        else:
+            vie.win(name)
 
 
 def make_progression():

@@ -4,13 +4,13 @@
 import random
 from brain_games.scripts import vie
 from brain_games.scripts import helper
-import sys
 
 
 def main():
 
     name = helper.greeting(
-        'Answer "yes" if given number is prime. Otherwise answer "no"')
+        'Answer "yes" if given number is prime. Otherwise answer "no"'
+    )
 
     for i in range(3):
         number = random.randint(1, 100)
@@ -19,9 +19,9 @@ def main():
         correct_answer = is_prime(number)
 
         if not helper.chek_correct_answer(name, user_answer, correct_answer):
-            sys.exit()
-
-    vie.win(name)
+            break
+    else:
+        vie.win(name)
 
 
 def is_prime(n):
