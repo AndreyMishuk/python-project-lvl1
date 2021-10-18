@@ -38,4 +38,4 @@ def print_question(question):
 
 
 def win(name):
-    print('{} {}'.format('Congratulations, ', name))
+    print('{} {}!'.format('Congratulations, ', name))
