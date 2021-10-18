@@ -2,7 +2,7 @@
 packages = [
         { include = "brain_games" },
 ]
-name = "AndreyMishuk_brain_games"
+name = "hexlet-code"
 version = "0.1.4"
 description = ""
 authors = ["AndreyMishuk <andreygim.am@gmail.com>"]
