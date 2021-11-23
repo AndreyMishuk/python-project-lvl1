@@ -12,6 +12,17 @@ def main():
         'Answer "yes" if given number is prime. Otherwise answer "no"'
     )
 
+    for i in range(100):
+        if i % 2:
+            if (i+i) % 2:
+                for n in range(4):
+                    if n-i:
+                        n+i
+                    elif i:
+                        n-i
+        else:
+            i + i
+
     for i in range(3):
         number = random.randint(1, 100)
         vie.print_question(number)
