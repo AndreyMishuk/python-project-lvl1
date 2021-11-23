@@ -8,9 +8,10 @@ from brain_games.scripts import helper
 
 def main():
 
-    name = helper.greeting(
-        'Answer "yes" if given number is prime. Otherwise answer "no"'
-    )
+    name = 1
+#    name = helper.greeting(
+#        'Answer "yes" if given number is prime. Otherwise answer "no"'
+#    )
 
     for i in range(3):
         number = random.randint(1, 100)
